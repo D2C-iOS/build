@@ -10,6 +10,8 @@
 #import "ESHTTPServer.h"
 #import "SvnManager.h"
 
+#import "ESBuild.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,7 +22,9 @@
     // Insert code here to initialize your application
     
     [[ESHTTPServer sharedInstance] start];
-     [SvnManager getSvnFileListWithPath:@"https://192.xx.xx.xx:443/svn/app-xxx-xxx-xxx/tags"];
+//    [SvnManager getSvnFileListWithPath:@"https://192.xx.xx.xx:443/svn/app-xxx-xxx-xxx/tags"];
+    
+//    [ESBuild buildWithDirectoryPath:@"/Users/cezr/Documents/Cornerstone/2.3.1"];
 }
 
 
