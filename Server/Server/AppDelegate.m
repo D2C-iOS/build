@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ESHTTPServer.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    [[ESHTTPServer sharedInstance] start];
+    
 }
 
 

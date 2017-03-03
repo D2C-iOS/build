@@ -17,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    NSURL *url = [NSURL URLWithString:@"http://192.168.2.108:22333"];
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (data) {
+            NSString *text = [NSString stringWithUTF8String:data.bytes];
+            NSLog(@"%@", text);
+        }
+    }] resume];
+    
 }
 
 

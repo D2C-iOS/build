@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< Updated upstream
 		56B8834F1E695BC400324C64 /* SendEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B8834E1E695BC400324C64 /* SendEmail.m */; };
 		56B883571E695BEC00324C64 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 56B883511E695BEC00324C64 /* CHANGELOG */; };
 		56B883581E695BEC00324C64 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 56B883521E695BEC00324C64 /* README */; };
@@ -14,14 +15,20 @@
 		56B8835A1E695BEC00324C64 /* sendEmail in Resources */ = {isa = PBXBuildFile; fileRef = 56B883541E695BEC00324C64 /* sendEmail */; };
 		56B8835B1E695BEC00324C64 /* sendEmail.pl in Resources */ = {isa = PBXBuildFile; fileRef = 56B883551E695BEC00324C64 /* sendEmail.pl */; };
 		56B8835C1E695BEC00324C64 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 56B883561E695BEC00324C64 /* TODO */; };
+=======
+		211FECB2DECA01FB8F73556E /* libPods-Server.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3484CBC332003FC1F2598E /* libPods-Server.a */; };
+>>>>>>> Stashed changes
 		6EB447131E694D3D0069336F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB447121E694D3D0069336F /* AppDelegate.m */; };
 		6EB447161E694D3D0069336F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB447151E694D3D0069336F /* main.m */; };
 		6EB447191E694D3D0069336F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB447181E694D3D0069336F /* ViewController.m */; };
 		6EB4471B1E694D3D0069336F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EB4471A1E694D3D0069336F /* Assets.xcassets */; };
 		6EB4471E1E694D3D0069336F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB4471C1E694D3D0069336F /* Main.storyboard */; };
+		6EB4474E1E6953FD0069336F /* ESHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB4474D1E6953FD0069336F /* ESHTTPServer.m */; };
+		6EB447511E69540B0069336F /* ESHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB447501E69540B0069336F /* ESHTTPConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< Updated upstream
 		56B8834D1E695BC400324C64 /* SendEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendEmail.h; sourceTree = "<group>"; };
 		56B8834E1E695BC400324C64 /* SendEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendEmail.m; sourceTree = "<group>"; };
 		56B883511E695BEC00324C64 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
@@ -30,6 +37,9 @@
 		56B883541E695BEC00324C64 /* sendEmail */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = sendEmail; sourceTree = "<group>"; };
 		56B883551E695BEC00324C64 /* sendEmail.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = sendEmail.pl; sourceTree = "<group>"; };
 		56B883561E695BEC00324C64 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+=======
+		2530364B8174CAAAC92EDB74 /* Pods-Server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Server.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Server/Pods-Server.debug.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		6EB4470E1E694D3D0069336F /* Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB447111E694D3D0069336F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EB447121E694D3D0069336F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +49,12 @@
 		6EB4471A1E694D3D0069336F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EB4471D1E694D3D0069336F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EB4471F1E694D3D0069336F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EB4474C1E6953FD0069336F /* ESHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHTTPServer.h; sourceTree = "<group>"; };
+		6EB4474D1E6953FD0069336F /* ESHTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHTTPServer.m; sourceTree = "<group>"; };
+		6EB4474F1E69540B0069336F /* ESHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHTTPConnection.h; sourceTree = "<group>"; };
+		6EB447501E69540B0069336F /* ESHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHTTPConnection.m; sourceTree = "<group>"; };
+		E08F7D975FF35B4079A56271 /* Pods-Server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Server.release.xcconfig"; path = "Pods/Target Support Files/Pods-Server/Pods-Server.release.xcconfig"; sourceTree = "<group>"; };
+		EB3484CBC332003FC1F2598E /* libPods-Server.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Server.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,12 +62,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				211FECB2DECA01FB8F73556E /* libPods-Server.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< Updated upstream
 		56B8834B1E69507C00324C64 /* SendEmail */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +98,14 @@
 				56B883561E695BEC00324C64 /* TODO */,
 			);
 			path = "sendEmail-v1.56";
+=======
+		10169DFBFA0ED994C8255616 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB3484CBC332003FC1F2598E /* libPods-Server.a */,
+			);
+			name = Frameworks;
+>>>>>>> Stashed changes
 			sourceTree = "<group>";
 		};
 		6EB447051E694D3D0069336F = {
@@ -87,6 +113,8 @@
 			children = (
 				6EB447101E694D3D0069336F /* Server */,
 				6EB4470F1E694D3D0069336F /* Products */,
+				DA695720FE129FEB4BC00FEE /* Pods */,
+				10169DFBFA0ED994C8255616 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,8 +129,12 @@
 		6EB447101E694D3D0069336F /* Server */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 				56B8834B1E69507C00324C64 /* SendEmail */,
 				56B8834C1E6950A200324C64 /* SvnManager */,
+=======
+				6EB447481E6953A90069336F /* HTTP */,
+>>>>>>> Stashed changes
 				6EB447111E694D3D0069336F /* AppDelegate.h */,
 				6EB447121E694D3D0069336F /* AppDelegate.m */,
 				6EB447171E694D3D0069336F /* ViewController.h */,
@@ -123,6 +155,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6EB447481E6953A90069336F /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				6EB4474C1E6953FD0069336F /* ESHTTPServer.h */,
+				6EB4474D1E6953FD0069336F /* ESHTTPServer.m */,
+				6EB4474F1E69540B0069336F /* ESHTTPConnection.h */,
+				6EB447501E69540B0069336F /* ESHTTPConnection.m */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		DA695720FE129FEB4BC00FEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2530364B8174CAAAC92EDB74 /* Pods-Server.debug.xcconfig */,
+				E08F7D975FF35B4079A56271 /* Pods-Server.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EB447221E694D3D0069336F /* Build configuration list for PBXNativeTarget "Server" */;
 			buildPhases = (
+				A915BA01C756C5B193D07F53 /* [CP] Check Pods Manifest.lock */,
 				6EB4470A1E694D3D0069336F /* Sources */,
 				6EB4470B1E694D3D0069336F /* Frameworks */,
 				6EB4470C1E694D3D0069336F /* Resources */,
+				F108D4FB882D40FF9FE29B2F /* [CP] Embed Pods Frameworks */,
+				2D251EFD991CC4B8F7748743 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,14 +250,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D251EFD991CC4B8F7748743 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Server/Pods-Server-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A915BA01C756C5B193D07F53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F108D4FB882D40FF9FE29B2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Server/Pods-Server-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6EB4470A1E694D3D0069336F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< Updated upstream
 				56B8834F1E695BC400324C64 /* SendEmail.m in Sources */,
+=======
+				6EB4474E1E6953FD0069336F /* ESHTTPServer.m in Sources */,
+>>>>>>> Stashed changes
 				6EB447191E694D3D0069336F /* ViewController.m in Sources */,
 				6EB447161E694D3D0069336F /* main.m in Sources */,
+				6EB447511E69540B0069336F /* ESHTTPConnection.m in Sources */,
 				6EB447131E694D3D0069336F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +418,7 @@
 		};
 		6EB447231E694D3D0069336F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2530364B8174CAAAC92EDB74 /* Pods-Server.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -324,6 +433,7 @@
 		};
 		6EB447241E694D3D0069336F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E08F7D975FF35B4079A56271 /* Pods-Server.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
