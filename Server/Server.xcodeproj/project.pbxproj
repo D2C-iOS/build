@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56B8834F1E695BC400324C64 /* SendEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B8834E1E695BC400324C64 /* SendEmail.m */; };
+		56B883571E695BEC00324C64 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 56B883511E695BEC00324C64 /* CHANGELOG */; };
+		56B883581E695BEC00324C64 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 56B883521E695BEC00324C64 /* README */; };
+		56B883591E695BEC00324C64 /* README-BR.txt in Resources */ = {isa = PBXBuildFile; fileRef = 56B883531E695BEC00324C64 /* README-BR.txt */; };
+		56B8835A1E695BEC00324C64 /* sendEmail in Resources */ = {isa = PBXBuildFile; fileRef = 56B883541E695BEC00324C64 /* sendEmail */; };
+		56B8835B1E695BEC00324C64 /* sendEmail.pl in Resources */ = {isa = PBXBuildFile; fileRef = 56B883551E695BEC00324C64 /* sendEmail.pl */; };
+		56B8835C1E695BEC00324C64 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 56B883561E695BEC00324C64 /* TODO */; };
 		6EB447131E694D3D0069336F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB447121E694D3D0069336F /* AppDelegate.m */; };
 		6EB447161E694D3D0069336F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB447151E694D3D0069336F /* main.m */; };
 		6EB447191E694D3D0069336F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB447181E694D3D0069336F /* ViewController.m */; };
@@ -15,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56B8834D1E695BC400324C64 /* SendEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendEmail.h; sourceTree = "<group>"; };
+		56B8834E1E695BC400324C64 /* SendEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendEmail.m; sourceTree = "<group>"; };
+		56B883511E695BEC00324C64 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
+		56B883521E695BEC00324C64 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		56B883531E695BEC00324C64 /* README-BR.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "README-BR.txt"; sourceTree = "<group>"; };
+		56B883541E695BEC00324C64 /* sendEmail */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = sendEmail; sourceTree = "<group>"; };
+		56B883551E695BEC00324C64 /* sendEmail.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = sendEmail.pl; sourceTree = "<group>"; };
+		56B883561E695BEC00324C64 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		6EB4470E1E694D3D0069336F /* Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB447111E694D3D0069336F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EB447121E694D3D0069336F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +55,9 @@
 		56B8834B1E69507C00324C64 /* SendEmail */ = {
 			isa = PBXGroup;
 			children = (
+				56B883501E695BEC00324C64 /* sendEmail-v1.56 */,
+				56B8834D1E695BC400324C64 /* SendEmail.h */,
+				56B8834E1E695BC400324C64 /* SendEmail.m */,
 			);
 			path = SendEmail;
 			sourceTree = "<group>";
@@ -49,6 +67,19 @@
 			children = (
 			);
 			path = SvnManager;
+			sourceTree = "<group>";
+		};
+		56B883501E695BEC00324C64 /* sendEmail-v1.56 */ = {
+			isa = PBXGroup;
+			children = (
+				56B883511E695BEC00324C64 /* CHANGELOG */,
+				56B883521E695BEC00324C64 /* README */,
+				56B883531E695BEC00324C64 /* README-BR.txt */,
+				56B883541E695BEC00324C64 /* sendEmail */,
+				56B883551E695BEC00324C64 /* sendEmail.pl */,
+				56B883561E695BEC00324C64 /* TODO */,
+			);
+			path = "sendEmail-v1.56";
 			sourceTree = "<group>";
 		};
 		6EB447051E694D3D0069336F = {
@@ -151,8 +182,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B883581E695BEC00324C64 /* README in Resources */,
+				56B8835A1E695BEC00324C64 /* sendEmail in Resources */,
+				56B8835C1E695BEC00324C64 /* TODO in Resources */,
+				56B883591E695BEC00324C64 /* README-BR.txt in Resources */,
+				56B8835B1E695BEC00324C64 /* sendEmail.pl in Resources */,
 				6EB4471B1E694D3D0069336F /* Assets.xcassets in Resources */,
 				6EB4471E1E694D3D0069336F /* Main.storyboard in Resources */,
+				56B883571E695BEC00324C64 /* CHANGELOG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B8834F1E695BC400324C64 /* SendEmail.m in Sources */,
 				6EB447191E694D3D0069336F /* ViewController.m in Sources */,
 				6EB447161E694D3D0069336F /* main.m in Sources */,
 				6EB447131E694D3D0069336F /* AppDelegate.m in Sources */,
@@ -278,6 +316,7 @@
 				DEVELOPMENT_TEAM = 959Q9RL588;
 				INFOPLIST_FILE = Server/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cezr.Server;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -291,6 +330,7 @@
 				DEVELOPMENT_TEAM = 959Q9RL588;
 				INFOPLIST_FILE = Server/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cezr.Server;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
