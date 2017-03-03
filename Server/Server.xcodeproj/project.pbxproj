@@ -37,6 +37,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56B8834B1E69507C00324C64 /* SendEmail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SendEmail;
+			sourceTree = "<group>";
+		};
+		56B8834C1E6950A200324C64 /* SvnManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SvnManager;
+			sourceTree = "<group>";
+		};
 		6EB447051E694D3D0069336F = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +70,8 @@
 		6EB447101E694D3D0069336F /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				56B8834B1E69507C00324C64 /* SendEmail */,
+				56B8834C1E6950A200324C64 /* SvnManager */,
 				6EB447111E694D3D0069336F /* AppDelegate.h */,
 				6EB447121E694D3D0069336F /* AppDelegate.m */,
 				6EB447171E694D3D0069336F /* ViewController.h */,
@@ -299,6 +315,7 @@
 				6EB447241E694D3D0069336F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
