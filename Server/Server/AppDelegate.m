@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ESHTTPServer.h"
+#import "SvnManager.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
     // Insert code here to initialize your application
     
     [[ESHTTPServer sharedInstance] start];
-    
+     [SvnManager getSvnFileListWithPath:@"https://192.xx.xx.xx:443/svn/app-xxx-xxx-xxx/tags"];
 }
 
 
