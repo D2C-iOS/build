@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56B883611E69647600324C64 /* SvnManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B883601E69647600324C64 /* SvnManager.m */; };
+		56B8837A1E6AB9E500324C64 /* SvnhelpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B883791E6AB9E500324C64 /* SvnhelpModel.m */; };
 		6EA53F421E69773B001A5780 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EA53F411E69773B001A5780 /* config.plist */; };
 		6EB447131E694D3D0069336F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB447121E694D3D0069336F /* AppDelegate.m */; };
 		6EB447161E694D3D0069336F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB447151E694D3D0069336F /* main.m */; };
@@ -30,6 +31,8 @@
 		27F6A6CC802418EB2BD44ED6 /* Pods-Server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Server.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Server/Pods-Server.debug.xcconfig"; sourceTree = "<group>"; };
 		56B8835F1E69647600324C64 /* SvnManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SvnManager.h; sourceTree = "<group>"; };
 		56B883601E69647600324C64 /* SvnManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SvnManager.m; sourceTree = "<group>"; };
+		56B883781E6AB9E500324C64 /* SvnhelpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SvnhelpModel.h; sourceTree = "<group>"; };
+		56B883791E6AB9E500324C64 /* SvnhelpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SvnhelpModel.m; sourceTree = "<group>"; };
 		6EA53F411E69773B001A5780 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		6EB4470E1E694D3D0069336F /* Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB447111E694D3D0069336F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 			children = (
 				56B8835F1E69647600324C64 /* SvnManager.h */,
 				56B883601E69647600324C64 /* SvnManager.m */,
+				56B883781E6AB9E500324C64 /* SvnhelpModel.h */,
+				56B883791E6AB9E500324C64 /* SvnhelpModel.m */,
 			);
 			path = Svn;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			files = (
 				56B883611E69647600324C64 /* SvnManager.m in Sources */,
 				6EB447691E6961CC0069336F /* SendEmail.m in Sources */,
+				56B8837A1E6AB9E500324C64 /* SvnhelpModel.m in Sources */,
 				6EB447191E694D3D0069336F /* ViewController.m in Sources */,
 				6EB447611E6961CC0069336F /* ESHTTPConnection.m in Sources */,
 				6EB447621E6961CC0069336F /* ESHTTPServer.m in Sources */,
