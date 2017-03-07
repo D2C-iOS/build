@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SvnhelpModel.h"
+#import "SvnModel.h"
 //代码仓位置
-#define FrameworkSvnPath  @"svn://localhost/T/branches/ceshi"
-//项目plist文件名称
-#define FrameWorkName     @"Property List.plist"
+#define FrameworkSvnPath          @"https://192.168.0.142:443/svn/app-ios-buyer-phone/Frameworks"
+//项目plist文件名称 开发
+#define FrameWorkName_DEV         @"Property List.plist"
 //相对主项目的依赖库文件目录
 #define FrameDocumentAboutProduct @"buyer/Frameworks"
 
@@ -25,7 +25,8 @@
 #define SVNUserName   @"cyf"
 //SVN密码
 #define SVNPassword   @"123456"
-
+//项目plist文件名称 发布
+#define FrameWorkName_APPStore @"Property List.plist"
 
 @interface SvnManager : NSObject
 /**
@@ -45,7 +46,7 @@
  @param localPath 本地指定文件夹
  @return model
  */
-+ (SvnhelpModel *)getLocalInfoWithBuildPath:(NSString *)buildPath localPath:(NSString *)localPath;
++ (SvnModel *)getLocalInfoWithBuildPath:(NSString *)buildPath localPath:(NSString *)localPath;
 
 
 + (BOOL)checkOutWithBuildPath:(NSString *)buildPath localPath:(NSString *)localPath;

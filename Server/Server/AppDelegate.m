@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ESHTTPServer.h"
 #import "SvnManager.h"
+#import "SvnModel.h"
+
 
 @interface AppDelegate ()
 

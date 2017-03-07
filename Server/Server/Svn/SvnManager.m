@@ -13,7 +13,7 @@
 + (BOOL)checkOutWithBuildPath:(NSString *)buildPath localPath:(NSString *)localPath {
     //    NSRange buildRange = [buildPath rangeOfString:SVNPath];
     //    if (buildRange.location == NSNotFound) {
-    //        [SvnhelpModel shareInstance].errorInfo = @"请求地址svn路径与约定svn路径不同";
+    //        [SvnModel shareInstance].errorInfo = @"请求地址svn路径与约定svn路径不同";
     //        return;
     //    }
     //    //拿到最后的路径如 tags/xxx_2.3.0  releace/xxx_2.3.0
@@ -41,7 +41,7 @@
     if (codeFlag && frameworkFlag) {
         NSLog(@"代码与依赖库库 下载完成 复制依赖库到指定目录");
         NSString *lastPath = [[self class] getLocalProductPathWithbuildPath:buildPath localPath:localPath];
-        copyFlag = [[self class] copyFromPath:[localPath stringByAppendingPathComponent:@"Framework"] toPath:[lastPath stringByAppendingPathComponent:@"Framework"]];
+        copyFlag = [[self class] copyFromPath:[localPath stringByAppendingPathComponent:@"Frameworks"] toPath:[lastPath stringByAppendingPathComponent:FrameDocumentAboutProduct] isDocument:YES];
     }
     
     if (copyFlag) {
@@ -59,7 +59,7 @@
     NSFileManager *manager  = [NSFileManager defaultManager];
     NSString *lastLocalPath = nil;
     if (frameworkFlag) {
-        lastLocalPath = [localPath stringByAppendingPathComponent:@"Framework"];
+        lastLocalPath = [localPath stringByAppendingPathComponent:@"Frameworks"];
     }
     else {
         lastLocalPath = [[self class] getLocalProductPathWithbuildPath:path localPath:localPath];
@@ -70,8 +70,8 @@
     }
     else {
         NSError *error = nil;
-        BOOL flag = [manager createDirectoryAtPath:localPath withIntermediateDirectories:YES attributes:nil error:&error];
-        NSLog(@"%d  %@",flag,error);
+        [manager createDirectoryAtPath:localPath withIntermediateDirectories:YES attributes:nil error:&error];
+        NSLog(@"%@",error);
     }
     NSArray *array = @[
                        @"checkout",
@@ -80,34 +80,34 @@
                        //                       [NSString stringWithFormat:@"--password=%@",SVNPassword],
                        lastLocalPath
                        ];
-    NSString *resultStr = [[self class] taskReturnStrWithpath:@"/usr/bin/svn" arguments:array];
-    if ([resultStr rangeOfString:@"Error"].location == NSNotFound) {
+    NSArray *resultArray = [[self class] taskWithpath:@"/usr/bin/svn" arguments:array];
+    NSLog(@"checkOut:%@",resultArray);
+    if ([[resultArray lastObject] rangeOfString:@"Checked out revision"].length) {
         return YES;
     }
     else {
         return NO;
     }
-    //    NSLog(@"%@",resultArray);
 }
 
 
 //获取本地代码仓与依赖库信息
-+ (SvnhelpModel *)getLocalInfoWithBuildPath:(NSString *)buildPath localPath:(NSString *)localPath {
-    [SvnhelpModel reset];
++ (SvnModel *)getLocalInfoWithBuildPath:(NSString *)buildPath localPath:(NSString *)localPath {
+    [SvnModel reset];
     if (!localPath || [localPath isEqualToString:@""]) {
-        [SvnhelpModel shareInstance].errorInfo = @"本地项目地址为空";
-        return [SvnhelpModel shareInstance];
+        [SvnModel shareInstance].errorInfo = @"本地项目地址为空";
+        return [SvnModel shareInstance];
     } else if (!buildPath || [buildPath isEqualToString:@""]) {
-        [SvnhelpModel shareInstance].errorInfo = @"请求地址路径为空";
-        return [SvnhelpModel shareInstance];
+        [SvnModel shareInstance].errorInfo = @"请求地址路径为空";
+        return [SvnModel shareInstance];
     }
     
     
     NSFileManager *fileManaher = [NSFileManager defaultManager];
     //    NSRange buildRange = [buildPath rangeOfString:SVNPath];
     //    if (buildRange.location == NSNotFound) {
-    //        [SvnhelpModel shareInstance].errorInfo = @"请求地址svn路径与约定svn路径不同";
-    //        return [SvnhelpModel shareInstance];
+    //        [SvnModel shareInstance].errorInfo = @"请求地址svn路径与约定svn路径不同";
+    //        return [SvnModel shareInstance];
     //    }
     
     //需要查找的完整本地路径
@@ -115,8 +115,8 @@
     
     //项目代码不存在
     if (![fileManaher fileExistsAtPath:searchPath]) {
-        [SvnhelpModel shareInstance].errorInfo = @"本地未发现与请求相同的代码";
-        return [SvnhelpModel shareInstance];
+        [SvnModel shareInstance].errorInfo = @"本地未发现与请求相同的代码";
+        return [SvnModel shareInstance];
     }
     
     
@@ -133,14 +133,14 @@
     //拿到framework提交号
     NSArray *svnFrameworkArray = @[
                                    @"log",
-                                   [searchPath stringByAppendingPathComponent:@"Framework"]
+                                   [localPath stringByAppendingPathComponent:@"Frameworks"]
                                    ];
     NSString *frameworkResult = [[self class] taskReturnStrWithpath:@"/usr/bin/svn" arguments:svnFrameworkArray];
     
     if ([frameworkResult isEqualToString:@""]) {
         NSArray *svnFrameworkArray = @[
                                        @"log",
-                                       [[localPath stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"Framework"]
+                                       [[localPath stringByDeletingLastPathComponent] stringByAppendingPathComponent:FrameDocumentAboutProduct]
                                        ];
         frameworkResult = [[self class] taskReturnStrWithpath:@"/usr/bin/svn" arguments:svnFrameworkArray];
     }
@@ -153,21 +153,21 @@
     
     
     if (codeResion && frameworkRevision) {
-        [SvnhelpModel shareInstance].errorInfo = nil;
-        [SvnhelpModel shareInstance].state     = 1;
-        [SvnhelpModel shareInstance].productPath = searchPath;
-        [SvnhelpModel shareInstance].productSign = [NSString stringWithFormat:@"%@_%@",codeResion,frameworkRevision];
+        [SvnModel shareInstance].errorInfo = nil;
+        [SvnModel shareInstance].state     = YES;
+        [SvnModel shareInstance].productPath = searchPath;
+        [SvnModel shareInstance].productSign = [NSString stringWithFormat:@"%@_%@",codeResion,frameworkRevision];
     }
     else if (!codeResion) {
-        [SvnhelpModel reset];
-        [SvnhelpModel shareInstance].errorInfo = @"本地不存在该版本号代码";
+        [SvnModel reset];
+        [SvnModel shareInstance].errorInfo = @"本地不存在该版本号代码";
     }
     else if (!codeResult) {
-        [SvnhelpModel reset];
-        [SvnhelpModel shareInstance].errorInfo = @"本地不存在Framework";
+        [SvnModel reset];
+        [SvnModel shareInstance].errorInfo = @"本地不存在Framework";
     }
     
-    return [SvnhelpModel shareInstance];
+    return [SvnModel shareInstance];
 }
 
 //根据返回信息 svn命令返回数据 得到返回信息
@@ -210,39 +210,63 @@
 }
 
 //拷贝
-+ (BOOL)copyFromPath:(NSString *)fromPath toPath:(NSString *)toPath {
++ (BOOL)copyFromPath:(NSString *)fromPath toPath:(NSString *)toPath isDocument:(BOOL)isDocument{
     NSFileManager *manager = [NSFileManager defaultManager];
-    if (![manager fileExistsAtPath:fromPath] || ![manager fileExistsAtPath:toPath]) {
+    //检查要copy的目录是否存在
+    if (![manager fileExistsAtPath:fromPath] || !toPath) {
         return NO;
     }
-    BOOL deleteFlag = [[self class] deleteFromPath:toPath];
+    BOOL deleteFlag = [[self class] deleteFromPath:toPath isDocument:isDocument];
     if (!deleteFlag) {
         return NO;
     }
-    NSArray *array = [manager contentsOfDirectoryAtPath:fromPath error:nil];
+    
+    //复制文件夹
     NSError *error = nil;
-    for (NSString *fileName in array) {
-        BOOL flag =   [manager copyItemAtPath:[fromPath stringByAppendingPathComponent:fileName] toPath:[toPath stringByAppendingPathComponent:fileName] error:&error];
+    if (isDocument) {
+        BOOL flag = [manager copyItemAtPath:fromPath toPath:toPath error:&error];
         if (!flag) {
             NSLog(@"%@",error);
             return NO;
         }
-        
     }
+    //逐个复制文件夹内容
+    else {
+        NSArray *array = [manager contentsOfDirectoryAtPath:fromPath error:nil];
+        for (NSString *fileName in array) {
+            BOOL flag =   [manager copyItemAtPath:[fromPath stringByAppendingPathComponent:fileName] toPath:[toPath stringByAppendingPathComponent:fileName] error:&error];
+            if (!flag) {
+                NSLog(@"%@",error);
+                return NO;
+            }
+            
+        }
+    }
+
     return YES;
 }
 
 //删除
-+ (BOOL)deleteFromPath:(NSString *)path {
++ (BOOL)deleteFromPath:(NSString *)path isDocument:(BOOL)isDocument {
     NSFileManager *manager = [NSFileManager defaultManager];
     NSError *error = nil;
-    NSArray *array = [manager contentsOfDirectoryAtPath:path error:&error];
-    for (NSString *fileName in array) {
-        BOOL flag = [manager removeItemAtPath:[path stringByAppendingPathComponent:fileName] error:&error];
-        if (!flag) {
-            NSLog(@"%@",error);
-            return NO;
+    BOOL flag      = NO;
+    if (isDocument) {
+        flag = [manager removeItemAtPath:path error:&error];
+    }
+    else {
+        NSArray *array = [manager contentsOfDirectoryAtPath:path error:&error];
+        for (NSString *fileName in array) {
+            flag = [manager removeItemAtPath:[path stringByAppendingPathComponent:fileName] error:&error];
+            if (!flag) {
+                break;
+            }
         }
+    }
+
+    if (!flag) {
+        NSLog(@"%@",error);
+        return NO;
     }
     return YES;
     
@@ -282,7 +306,6 @@
     
     NSFileHandle *file = [pipe fileHandleForReading];
     [task launch];
-    [task waitUntilExit];
     
     NSData *dataRead = [file readDataToEndOfFile];
     
@@ -345,7 +368,7 @@
 + (void)checkoutWithInfoPlist:(NSString *)path {
     NSString *frameWorkPath = [path stringByAppendingPathComponent:FrameDocumentAboutProduct];
     
-    NSString *plistPath = [[path stringByDeletingLastPathComponent] stringByAppendingPathComponent:FrameWorkName];
+    NSString *plistPath = [[path stringByDeletingLastPathComponent] stringByAppendingPathComponent:FrameWorkName_DEV];
     if (![[self class] hasPath:plistPath]) {
         NSLog(@"目录下不存在配置文件");
         return;

@@ -1,14 +1,14 @@
 //
-//  SvnhelpModel.h
-//  FrameWorkHelper
+//  SvnModel.h
+//  Server
 //
-//  Created by d2c_cyf on 17/3/4.
-//  Copyright © 2017年 d2c_cyf. All rights reserved.
+//  Created by d2c_cyf on 17/3/7.
+//  Copyright © 2017年 翟泉. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface SvnhelpModel : NSObject
+@interface SvnModel : NSObject
 /**
  打包项目绝对路径  完整代码
  */
@@ -27,7 +27,7 @@
 /**
  状态
  */
-@property(nonatomic, assign)NSInteger state;
+@property(nonatomic, assign)BOOL  state;
 
 
 
@@ -43,13 +43,14 @@
 
 /**
  单利传递信息
-
+ 
  @return 模型
  */
-+ (SvnhelpModel *)shareInstance;
++ (SvnModel *)shareInstance;
 
 /**
  重置
  */
 + (void)reset;
+
 @end
